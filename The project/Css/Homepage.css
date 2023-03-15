@@ -27,11 +27,11 @@ section {
 }
 
 #home {
-  background-color: #fff;
+  background-color: #eae7dc;
 }
 
 #categories {
-  background-color: #fff;
+  background-color: #eae7dc;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -41,11 +41,11 @@ section {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: #eae7dc;
 }
 
 #contact {
-  background-color: #666;
+  background-color: #8e8d8a;
 }
 
 /*-------------Helpers-------------*/

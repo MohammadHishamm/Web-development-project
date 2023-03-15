@@ -27,18 +27,21 @@ section {
 }
 
 #home {
-  background-color: #f7f4e9;
+  background-color: #fff;
 }
 
 #categories {
-  background-color: #ddd;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 #Offers {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #eae7dc;
+  background-color: #fff;
 }
 
 #contact {
@@ -261,4 +264,78 @@ a:hover {
 
 .ctrl-btn.pro-next {
   right: 0;
+}
+/* ------------categories------------ */
+
+body {
+  background: #ccc;
+  font-family: arial, verdana, tahoma;
+}
+
+.accordian {
+  width: 70%;
+  height: 65%;
+  overflow: hidden;
+
+  margin: 100px auto;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+.accordian ul {
+  width: 2000px;
+  margin: 0;
+  padding: 0;
+}
+
+.accordian li {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 490px;
+  float: left;
+  border-left: 1px solid #888;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.accordian ul:hover li {
+  width: 92px;
+}
+
+.accordian ul li:hover {
+  width: 400px;
+}
+
+.accordian li img {
+  display: block;
+}
+
+.image_title {
+  background: -webkit-linear-gradient(45deg, #d8c3a5, #ff5858);
+  background: linear-gradient(45deg, #d8c3a5, #ff5858);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 695px;
+  height: 100px;
+}
+
+.image_title a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.myimg {
+  height: 390px;
 }

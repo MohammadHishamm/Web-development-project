@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="../Css/cart page css.css" />
+  </head>
+  <body>
+    <h1>Shopping Cart</h1>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Remove</th>
+      </tr>
+      <tr>
+        <td>Product 1</td>
+        <td>$10</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$10</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Product 2</td>
+        <td>$20</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$20</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Product 3</td>
+        <td>$30</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$30</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">Total</td>
+        <td id="grand-total">$60</td>
+        <td></td>
+      </tr>
+    </table>
+    <div class="buttons">
+      <button id="update">Update</button>
+      <button id="checkout">Checkout</button>
+    </div>
+    <script src="script.js">
+
+
+
+      const quantities = document.querySelectorAll('.quantity');
+      const totals = document.querySelectorAll('.total');
+      const removeButtons = document.querySelectorAll('.remove');
+      const grandTotal = document.getElementById('grand-total');
+      const updateButton = document.getElementById('update');
+      const checkoutButton = document.getElementById('checkout');
+
+      // Add event listeners to quantity inputs to update the total for that row
+      quantities.forEach((quantity, index) => {
+      quantity.addEventListener('change', () => {
+      if (quantity.value < 1 || quantity.value > 10) {
+      quantity.value = 1;
+      alert('Please enter a valid quantity between 1 and 10.');
+      }
+      const price = parseFloat(totals[index].textContent.slice(1));
+      totals[index].textContent = '$' + (price * quantity.value).toFixed(2);
+      updateGrandTotal();
+      });
+      });
+
+
+
+
+
+      //------------
+
+      // Add event listeners to remove buttons to remove that row
+      $('.remove-button').on('click', function() {
+        $(this).closest('tr').remove();
+        updateCart();
+      });
+
+      // Function to update the cart totals
+      function updateCart() {
+        var subtotal = 0;
+        $('tbody tr').each(function() {
+          var price = parseFloat($(this).find('td:nth-child(2)').text().replace('$', ''));
+          var quantity = parseInt($(this).find('input[name="quantity[]"]').val());
+          var total = price * quantity;
+          $(this).find('td:nth-child(4)').text('$' + total.toFixed(2));
+          subtotal += total;
+        });
+        var tax = subtotal * 0.1;
+        var total = subtotal + tax;
+        $('#grand-total').text('$' + total.toFixed(2));
+      }
+
+      // Add event listener to update button to update the cart totals
+      $('#update-button').on('click', function() {
+        updateCart();
+      });
+
+      // Add event listener to form submit to prevent default behavior and submit data using AJAX
+      $('#cart-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+          url: $(this).attr('action'),
+          method: $(this).attr('method'),
+          data: $(this).serialize(),
+          success: function(response) {
+            alert(response);
+            $('tbody tr').remove();
+            updateCart();
+          },
+          error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

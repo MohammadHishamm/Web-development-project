@@ -1,58 +1,55 @@
-    
-    document.querySelectorAll(".btn").forEach(function(btn) {
-      btn.addEventListener("click", function() {
-        document.querySelector(".form-signin").classList.toggle("form-signin-left");
-        document.querySelector(".form-signup").classList.toggle("form-signup-left");
-        document.querySelector(".frame").classList.toggle("frame-long");
-        document.querySelector(".signup-inactive").classList.toggle("signup-active");
-        document.querySelector(".signin-active").classList.toggle("signin-inactive");
-        document.querySelector(".forgot").classList.toggle("forgot-left");
-        this.classList.remove("idle");
-        this.classList.add("active");
-      });
-    });
-  
-    
-  
-    document.querySelectorAll(".btn-signin").forEach(function(btn) {
-      btn.addEventListener("click", function() {
-        document.querySelector(".btn-animate").classList.toggle("btn-animate-grow");
-        document.querySelector(".welcome").classList.toggle("welcome-left");
-        document.querySelector(".cover-photo").classList.toggle("cover-photo-down");
-        document.querySelector(".frame").classList.toggle("frame-short");
-        document.querySelector(".profile-photo").classList.toggle("profile-photo-down");
-        document.querySelector(".btn-goback").classList.toggle("btn-goback-up");
-        document.querySelector(".forgot").classList.toggle("forgot-fade");
-      });
-    });
-  
+document.querySelectorAll(".btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    document.querySelector(".form-signin").classList.toggle("form-signin-left");
+    document.querySelector(".form-signup").classList.toggle("form-signup-left");
+    document.querySelector(".frame").classList.toggle("frame-long");
+    document
+      .querySelector(".signup-inactive")
+      .classList.toggle("signup-active");
+    document
+      .querySelector(".signin-active")
+      .classList.toggle("signin-inactive");
+    document.querySelector(".forgot").classList.toggle("forgot-left");
+    this.classList.remove("idle");
+    this.classList.add("active");
+  });
+});
 
-  //Validation part:--------------------------------------------------
+document.querySelectorAll(".btn-signin").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    document.querySelector(".btn-animate").classList.toggle("btn-animate-grow");
+    document.querySelector(".welcome").classList.toggle("welcome-left");
+    document.querySelector(".cover-photo").classList.toggle("cover-photo-down");
+    document.querySelector(".frame").classList.toggle("frame-short");
+    document
+      .querySelector(".profile-photo")
+      .classList.toggle("profile-photo-down");
+    document.querySelector(".btn-goback").classList.toggle("btn-goback-up");
+    document.querySelector(".forgot").classList.toggle("forgot-fade");
+  });
+});
+
+//Validation part:--------------------------------------------------
 
 let userName = document.getElementById("username");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("cpassword");
-let alert1=document.getElementById("alert1");
-
+let alert1 = document.getElementById("alert1");
 
 function handleInput() {
- 
   let userNameValue = userName.value.trim();
   let emailValue = email.value.trim();
   let passwordValue = password.value.trim();
   let confirmPasswordValue = confirmPassword.value.trim();
 
-  
   if (userNameValue === "") {
-    setErrorFor(userName, "Username cannot be blank");
+    alert1.innerHTML = "aDXASFSAGDFS";
   } else {
-    setSuccessFor(userName);
   }
 
-  
   if (emailValue === "") {
-    setErrorFor(email, "Email cannot be blank");
+    alert2.innerHTML = "aDXASFSAGDFS";
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Email is not valid");
   } else {
@@ -78,20 +75,18 @@ function handleInput() {
   }
 }
 
-
 // To check if email is valid or not ?
 function isEmail(email) {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
-
-  signup.addEventListener("click", function() {
-    document.querySelector(".nav").classList.toggle("nav-up");
-    document.querySelector(".form-signup-left").classList.toggle("form-signup-down");
-    document.querySelector(".success").classList.toggle("success-left");
-    document.querySelector(".frame").classList.toggle("frame-short");
-    handleInput();
-  });
-
-  
+// document.getElementById("Signup").addEventListener("click", function () {
+//   document.querySelector(".nav").classList.toggle("nav-up");
+//   document
+//     .querySelector(".form-signup-left")
+//     .classList.toggle("form-signup-down");
+//   document.querySelector(".success").classList.toggle("success-left");
+//   document.querySelector(".frame").classList.toggle("frame-short");
+// });

@@ -34,10 +34,10 @@
 				        <form class="form-signup" action="" method="post" name="form">
           <label for="fullname">Full name</label>
           <input class="form-styling" type="text" name="fullname" placeholder="" id="username"/>
-          <small id="alert1"> Error message</small>
+          <small id="alert1"> </small>
           <label for="email">Email</label>
           <input class="form-styling" type="text" name="email" placeholder="" id="email"/>
-          <small> Error message</small>
+          <small  id="alert2"> Error message</small>
           <label for="phone">Phone number</label>
           <input class="form-styling" type="text" name="phone" placeholder=""/>
           <small> Error message</small>
@@ -47,7 +47,7 @@
           <label for="confirmpassword">Confirm password</label>
           <input class="form-styling" type="text" name="confirmpassword" placeholder="" id="cpassword"/>
           <small> Error message</small>
-          <button  class="btn-signup" id="Signup">Sign Up</button>
+          <button  class="btn-signup"  >Sign Up</button>
 				        </form>
       
             <div  class="success">
@@ -65,7 +65,7 @@
         <div class="cover-photo"></div>
         <div class="profile-photo"></div>
         <h1 class="welcome">Welcome, Chris</h1>
-        <a class="btn-goback" value="Refresh" onClick="history.go()">Go back</a>
+        <a class="btn-goback"  id="Signup" value="Refresh" onclick="handleInput()" >Go back</a>
       </div>
   </div>
     

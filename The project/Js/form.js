@@ -21,9 +21,7 @@ document.querySelectorAll(".btn-signin").forEach(function (btn) {
     document.querySelector(".welcome").classList.toggle("welcome-left");
     document.querySelector(".cover-photo").classList.toggle("cover-photo-down");
     document.querySelector(".frame").classList.toggle("frame-short");
-    document
-      .querySelector(".profile-photo")
-      .classList.toggle("profile-photo-down");
+    document.querySelector(".profile-photo").classList.toggle("profile-photo-down");
     document.querySelector(".btn-goback").classList.toggle("btn-goback-up");
     document.querySelector(".forgot").classList.toggle("forgot-fade");
   });
@@ -36,7 +34,9 @@ let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("cpassword");
 let alert1 = document.getElementById("alert1");
-
+let alert2 = document.getElementById("alert2");
+let alert4 = document.getElementById("alert4");
+let alert5 = document.getElementById("alert5");
 function handleInput() {
   let userNameValue = userName.value.trim();
   let emailValue = email.value.trim();
@@ -44,38 +44,32 @@ function handleInput() {
   let confirmPasswordValue = confirmPassword.value.trim();
 
   if (userNameValue === "") {
-    alert1.innerHTML = "aDXASFSAGDFS";
+    alert1.innerHTML = "Username cannot be blank";
   } else {
   }
 
   if (emailValue === "") {
-    alert2.innerHTML = "aDXASFSAGDFS";
+    alert2.innerHTML = "You should enter your email";
   } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "Email is not valid");
-  } else {
-    setSuccessFor(email);
+    alert2.innerHTML = "Email is not valid";
   }
 
   // Checking for password
   if (passwordValue === "") {
-    setErrorFor(password, "Password cannot be blank");
+    alert4.innerHTML="Password cannot be blank";
   } else if (passwordValue.length < 6 || passwordValue.length > 30) {
-    setErrorFor(password, "Password length should be between 6 and 30");
-  } else {
-    setSuccessFor(password);
+    alert4.innerHTML="Password should be between 6 and 30 characters";
   }
 
   // Checking for confirm password
   if (confirmPasswordValue === "") {
-    setErrorFor(confirmPassword, "Confirm Password cannot be blank");
+    alert5.innerHTML="Confirm your password first";
   } else if (confirmPasswordValue !== passwordValue) {
-    setErrorFor(confirmPassword, "Confirm password not matched with password");
-  } else {
-    setSuccessFor(confirmPassword);
-  }
+    alert5.innerHTML="Password not the same";
+  } 
 }
 
-// To check if email is valid or not ?
+// To check if email is valid or not 
 function isEmail(email) {
   const re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

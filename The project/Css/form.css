@@ -32,7 +32,7 @@ body {
 }
 
 .frame-long {
-  height: 615px;
+  height: 690px;
 }
 
 .frame-short {
@@ -82,11 +82,12 @@ li {
 }
 
 .signup-active a {
-  cursor: pointer;
+  padding-bottom: 10px;
   color: #ffffff;
   text-decoration: none;
   border-bottom: solid 2px #1059FF;
-  padding-bottom: 10px;
+  transition: all .25s ease;
+  cursor: pointer;
 }
 
 .signup-inactive a {
@@ -189,8 +190,17 @@ li {
 	padding-left: 15px;
 	border: none;
 	border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   background: rgba(255,255,255,.2);
+}
+small{
+  width: 100%;
+  height: 35px;
+	padding-left: 15px;
+  margin-bottom: 5px;
+  color: #e75c3c;
+  margin-top: 5px;
+
 }
 
 label {
@@ -504,3 +514,21 @@ a.btn-goback:hover {
   fill: #1059FF;
   transform: rotate(180deg);
 }
+
+
+
+
+
+
+
+ 
+
+  
+ 
+
+
+
+
+
+
+

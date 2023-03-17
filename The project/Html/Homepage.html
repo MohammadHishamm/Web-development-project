@@ -7,8 +7,14 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../Css/Homepage.css" />
+    <!-- search icon  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
+    <!-- ---------nav------------ -->
     <header id="nav-wrapper">
       <nav id="nav">
         <div class="nav left">
@@ -18,6 +24,22 @@
           <button id="menu" class="btn-nav">
             <span class="fas fa-bars"></span>
           </button>
+          <!--------------- search bar----------- -->
+
+          <div class="srch_wrpr">
+            <input type="checkbox" name="" class="checkbox" />
+            <div class="srch_sb_cnt">
+              <input
+                type="text"
+                name="text_bar"
+                class="sech_txt_inpt"
+                placeholder="Type to search..."
+              />
+              <button class="srch_btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="nav right">
           <a href="#home" class="nav-link active"

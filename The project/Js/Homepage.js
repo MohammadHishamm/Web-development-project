@@ -1,4 +1,5 @@
 "use strict";
+//--------------NAvBAr--------------------///
 var util = {
   mobileMenu() {
     var nav = document.getElementById("nav");
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   window.addEventListener("resize", util.windowResize);
   document.addEventListener("scroll", util.scrollEvent);
 });
+//-------------------------slider-------------------//////
 
 productScroll();
 
@@ -94,3 +96,4 @@ function getCount(parent, getChildrensChildren) {
   }
   return relevantChildren;
 }
+//---------------------------search bar--------------------------//

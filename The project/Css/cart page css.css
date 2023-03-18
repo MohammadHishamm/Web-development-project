@@ -36,7 +36,7 @@ input[type="number"] {
 	text-align: center;
 }
 
-button {
+/* button {
 	padding: 10px;
 	margin: 0 10px;
 	background-color: #4CAF50;
@@ -44,11 +44,11 @@ button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
+} */
 
-button:hover {
+/* button:hover {
 	background-color: #3e8e41;
-}
+} */
 
 .remove {
 	background-color: #f44336;

@@ -75,6 +75,7 @@ section {
   flex-direction: column;
   font-family: "Saira Semi Condensed", sans-serif;
   height: 4em;
+
   overflow: hidden;
 }
 #nav.nav-visible {
@@ -469,29 +470,29 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
 
 /*----------------Slideshow---------------------*/
 
-.im{ 
+.im {
   width: 200px;
   height: 680px;
-  }
+}
 
-  .fur {
-    font-family: 'Times New Roman';
-    font-size:550%;
-position: absolute;
-top: 30%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
+.fur {
+  font-family: "Times New Roman";
+  font-size: 550%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .the {
-font-family:'Times New Roman';
-font-size:200%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: #ff5858;
+  font-family: "Times New Roman";
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff5858;
 }
 
 /* Fading animation */
@@ -501,9 +502,10 @@ color: #ff5858;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-
-

@@ -353,7 +353,6 @@ body {
   z-index: 1;
 }
 .srch_sb_cnt {
-  
   width: 70px;
   height: 50px;
   /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
@@ -366,7 +365,6 @@ body {
   transition: all 0.4s ease-in-out 0s;
   z-index: 0;
   border-radius: 5px;
-
 }
 .sech_txt_inpt {
   opacity: 0;
@@ -473,7 +471,7 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
 
 .im {
   width: 200px;
-  height: 680px;
+  height: 755 px;
 }
 
 .fur {
@@ -498,9 +496,9 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
   transform: translate(-50%, -50%);
   color: #ff5858;
   background-color: white;
-  width:20%;
+  width: 20%;
   text-align: center;
-  padding:10px;
+  padding: 10px;
   border-radius: 30px;
   font-weight: bold;
 }
@@ -519,31 +517,31 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
     opacity: 1;
   }
 }
-.fa-shopping-cart{
+.fa-shopping-cart {
   color: white;
-margin-top:10px;
-margin-right: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
 }
-.fa-user{
+.fa-user {
   color: white;
-  margin-top:10px;
-margin-right: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
 }
-.fa-user:hover{
+.fa-user:hover {
   color: #444;
 }
-.btn-signin{
+.btn-signin {
   width: 70px;
   height: 30px;
   background-color: white;
   border-radius: 30px;
-  margin-top:17px;
-margin-right: 20px;
+  margin-top: 17px;
+  margin-right: 20px;
 }
-.btn-signin:hover{
+.btn-signin:hover {
   color: white;
   background-color: #444;
 }
-.fa-shopping-cart:hover{
-  color:#444;
+.fa-shopping-cart:hover {
+  color: #444;
 }

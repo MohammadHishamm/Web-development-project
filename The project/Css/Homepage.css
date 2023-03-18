@@ -45,7 +45,7 @@ section {
 }
 
 #contact {
-  background-color: #8e8d8a;
+  background-color: #eae7dc;
 }
 
 /*-------------Helpers-------------*/
@@ -544,4 +544,73 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
 }
 .fa-shopping-cart:hover {
   color: #444;
+}
+/* -----------------Contact us------------------- */
+.contact_section {
+  width: 100%;
+  float: left;
+  background-image: url(../images/contact-bg.png);
+  height: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 90px;
+}
+.mail_sectin{
+  width: 100%;
+  float: left;
+}
+.contact_text{
+  width: 100%;
+  float: left;
+  font-size: 36px;
+  color: #ffffff;
+
+}
+.email-bt {
+  color: #989696;
+  width: 350px;
+  height: 10px;
+  font-size: 18px;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: 50px;
+  border: 0px;
+  border-radius: 5px;
+}
+input.email-bt::placeholder {
+  color: #989696;
+}
+.massage-bt {
+  color: #989696;
+  width: 350px;
+  height: 120px;
+  font-size: 18px;
+  padding: 50px 20px 10px 20px;
+  margin-top: 25px;
+  margin-left: 50px;
+  border: 0px;
+  border-radius: 5px;
+}
+textarea#comment::placeholder {
+  color: #989696;
+}
+.send_bt {
+  width: 1300px;
+  float: left;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.send_bt a{
+  width: 30%;
+  float: left;
+  font-size: 20px;
+  color: #e98074;
+  text-align: center;
+  padding: 10px 0px;
+  font-weight: bold;
+  background-color: white  ;
+}
+.send_bt a:hover{
+  color: white;
+  background-color: #ff5858;
 }

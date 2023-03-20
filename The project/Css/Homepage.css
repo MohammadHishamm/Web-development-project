@@ -23,7 +23,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  height: 110vh;
 }
 
 #home {
@@ -524,7 +524,7 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
 }
 .fa-user {
   color: white;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-right: 20px;
 }
 .fa-user:hover {

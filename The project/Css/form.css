@@ -5,11 +5,11 @@ body * {
 }
 
 body {
-  background: linear-gradient(#eae7dc,#eae7dc);
+  background: linear-gradient(#eae7dc, #eae7dc);
   background-size: cover;
 }
 
-.container {
+.form-container {
   width: 100%;
   padding-top: 60px;
   padding-bottom: 100px;
@@ -38,7 +38,7 @@ body {
   /* box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1); */
 }
 
-.nav {
+.form-nav {
   width: 100%;
   height: 100px;
   padding-top: 40px;
@@ -62,8 +62,9 @@ li {
 }
 
 .signin-active a {
+  margin-left: 30px;
   padding-bottom: 10px;
-  color: black;
+  color: rgba(255, 255, 255, 0.477);
   text-decoration: none;
   border-bottom: solid 2px #ffffff;
   transition: all 0.25s ease;
@@ -80,7 +81,7 @@ li {
 
 .signup-active a {
   padding-bottom: 10px;
-  color: black;      /*------------------ msh sh8al---------------*/
+  color: black; /*------------------ msh sh8al---------------*/
   text-decoration: none;
   border-bottom: solid 2px #ffffff;
   transition: all 0.25s ease;
@@ -326,7 +327,7 @@ textarea:focus {
   background-color: #e98074;
 }
 
-.btn-signin {
+.btn_signin {
   float: left;
   padding-top: 8px;
   width: 100%;
@@ -355,7 +356,9 @@ textarea:focus {
   transition: all 0.5s ease, top 0.5s ease 0.5s, height 0.5s ease 0.5s,
     background-color 0.5s ease 0.75s;
 }
-.btn-signup:hover{background-color: #ff5858;}
+.btn-signup:hover {
+  background-color: #ff5858;
+}
 .btn-animate-grow {
   width: 130%;
   height: 625px;
@@ -367,9 +370,9 @@ textarea:focus {
 }
 
 a.btn-signup:hover,
-a.btn-signin:hover {
+a.btn_signin:hover {
   cursor: pointer;
-  background-color: #ff5858;  /*--------msh mazbot f sign up---------*/
+  background-color: #ff5858; /*--------msh mazbot f sign up---------*/
   transition: background-color 0.5s;
 }
 
@@ -420,7 +423,7 @@ a.btn-signin:hover {
   position: relative;
   left: 0px;
   top: -900px;
-  background: linear-gradient(#ff5858,#eae7dc);
+  background: linear-gradient(#ff5858, #eae7dc);
   background-size: cover;
   opacity: 0;
   transition: all 1.5s ease 0.55s;

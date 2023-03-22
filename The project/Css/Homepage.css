@@ -244,61 +244,97 @@ a:hover {
   }
 }
 /* ------------slider-------------------- */
-.slider {
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  background-color: white;
+
+  padding-bottom: 1%;
+}
+
+.product-image {
   width: 100%;
   height: 200px;
-  position: relative;
-  margin: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  object-fit: cover;
 }
 
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slider .slide {
-  display: flex;
-  position: absolute;
-  left: 0;
-  transition: 0.3s left ease-in-out;
-}
-
-.slider .item {
-  margin-right: 10px;
-}
-
-.slider .item:last-child {
-  margin-right: 0;
-}
-
-.ctrl {
+.product-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 10px 0;
   text-align: center;
-  margin-top: 5px;
 }
 
-.ctrl-btn {
-  padding: 20px 20px;
-  min-width: 50px;
-  background: #fff;
+.product-description {
+  font-size: 0.875rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: orange;
+}
+
+.add-to-cart-button {
+  padding: 10px 20px;
+  background-color: orange;
   border: none;
-  font-weight: 600;
-  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.875rem;
   cursor: pointer;
-  outline: none;
+}
 
+.add-to-cart-button:hover {
+  background-color: darkorange;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.original-price {
+  text-decoration: line-through;
+  color: lightgray;
+  font-size: 0.875rem;
+}
+
+.discount-price {
+  color: orange;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.btn-next {
   position: absolute;
-  top: 50%;
-  margin-top: -27.5px;
-}
-
-.ctrl-btn.pro-prev {
   left: 0;
+  top: 25%;
+  margin: 10px;
 }
 
-.ctrl-btn.pro-next {
+.btn-prev {
+  position: absolute;
   right: 0;
+  top: 25%;
+  margin: 10px;
 }
+
 /* ------------categories------------ */
 
 body {

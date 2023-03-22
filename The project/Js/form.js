@@ -15,7 +15,7 @@ document.querySelectorAll(".btn").forEach(function (btn) {
   });
 });
 
-document.querySelectorAll(".btn-signin").forEach(function (btn) {
+document.querySelectorAll(".btn_signin").forEach(function (btn) {
   btn.addEventListener("click", function () {
     document.querySelector(".btn-animate").classList.toggle("btn-animate-grow");
     document.querySelector(".welcome").classList.toggle("welcome-left");

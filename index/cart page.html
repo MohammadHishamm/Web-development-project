@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="../Css/cart page css.css" />
+    <link rel="stylesheet" href="../Css/Homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- ---------nav------------ -->
+    <header id="nav-wrapper">
+      <nav id="nav">
+        <div class="nav left">
+          <span class="gradient skew"
+            ><h1 class="logo un-skew"><a href="#home">Logo Here</a></h1></span
+          >
+        </div>
+        <div class="nav center">
+          <a href="Homepage.html" class="nav-link active"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Home</span></span
+            ></a
+          >
+          <a href="category.html" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">categories</span></span
+            ></a
+          >
+          <a href="#Offers" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Offers</span></span
+            ></a
+          >
+          <a href="#contact" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Contact Us</span></span
+            ></a
+          ></div>
+        <div class="nav right">
+          <button id="menu" class="btn-nav">
+            <span class="fas fa-bars"></span>
+          </div>
+          <!--------------- search bar----------- -->
+
+          <div class="srch_wrpr">
+            
+          </button>
+            <input type="checkbox" name="" class="checkbox" />
+            <div class="srch_sb_cnt">
+              <input
+                type="text"
+                name="text_bar"
+                class="sech_txt_inpt"
+                placeholder="Type to search..."
+              />
+              <button class="srch_btn">
+                <i class="fa fa-search"aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <!-- profile button -->
+          <div>
+            
+              <a href="form.html"><button class="btn-signin">Sign in</button></a>
+           <!-- <a href=""><button class="userbtn"> <i class="fa fa-user" style="font-size:36px;"></i> </button></a>         -->
+           </div>
+          <!-- cart button -->
+        <div>
+          <a href="cart page.html">
+         <button class="cartbtn"><i class='fa fa-shopping-cart' style='font-size:36px'></i></button></a>
+         </div>
+         
+          <!-- --------- -->
+        </div>
+        
+      </nav>
+    </header>
+    <!------------------------- end of nav ------------------------>
+
+    <br><br><br>
+    <h1>Shopping Cart</h1>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Remove</th>
+      </tr>
+      <tr>
+        <td>Product 1</td>
+        <td>$10</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$10</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Product 2</td>
+        <td>$20</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$20</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td>Product 3</td>
+        <td>$30</td>
+        <td>
+          <input type="number" value="1" min="1" max="10" class="quantity" />
+        </td>
+        <td class="total">$30</td>
+        <td><button class="remove">Remove</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">Total</td>
+        <td id="grand-total">$60</td>
+        <td></td>
+      </tr>
+    </table>
+    <div class="buttons">
+      <button id="update">Update</button>
+      <button id="checkout">Checkout</button>
+    </div>
+    <script src="script.js">
+
+
+
+      const quantities = document.querySelectorAll('.quantity');
+      const totals = document.querySelectorAll('.total');
+      const removeButtons = document.querySelectorAll('.remove');
+      const grandTotal = document.getElementById('grand-total');
+      const updateButton = document.getElementById('update');
+      const checkoutButton = document.getElementById('checkout');
+
+      // Add event listeners to quantity inputs to update the total for that row
+      quantities.forEach((quantity, index) => {
+      quantity.addEventListener('change', () => {
+      if (quantity.value < 1 || quantity.value > 10) {
+      quantity.value = 1;
+      alert('Please enter a valid quantity between 1 and 10.');
+      }
+      const price = parseFloat(totals[index].textContent.slice(1));
+      totals[index].textContent = '$' + (price * quantity.value).toFixed(2);
+      updateGrandTotal();
+      });
+      });
+
+
+
+
+
+      //------------
+
+      // Add event listeners to remove buttons to remove that row
+      $('.remove-button').on('click', function() {
+        $(this).closest('tr').remove();
+        updateCart();
+      });
+
+      // Function to update the cart totals
+      function updateCart() {
+        var subtotal = 0;
+        $('tbody tr').each(function() {
+          var price = parseFloat($(this).find('td:nth-child(2)').text().replace('$', ''));
+          var quantity = parseInt($(this).find('input[name="quantity[]"]').val());
+          var total = price * quantity;
+          $(this).find('td:nth-child(4)').text('$' + total.toFixed(2));
+          subtotal += total;
+        });
+        var tax = subtotal * 0.1;
+        var total = subtotal + tax;
+        $('#grand-total').text('$' + total.toFixed(2));
+      }
+
+      // Add event listener to update button to update the cart totals
+      $('#update-button').on('click', function() {
+        updateCart();
+      });
+
+      // Add event listener to form submit to prevent default behavior and submit data using AJAX
+      $('#cart-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+          url: $(this).attr('action'),
+          method: $(this).attr('method'),
+          data: $(this).serialize(),
+          success: function(response) {
+            alert(response);
+            $('tbody tr').remove();
+            updateCart();
+          },
+          error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

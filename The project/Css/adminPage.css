@@ -59,41 +59,22 @@ ul {
   font-size: 29px;
 }
 
-.panel {
-  padding-top: 80px;
+.wrapper {
+  display: block;
+  margin: 5em auto;
+  border: 1px solid #555;
+  width: 700px;
+  height: 350px;
   position: relative;
-  background: #eae7dc;
-  width: 600px;
-  height: 200px;
-  margin: 40px auto;
+}
+p {
   text-align: center;
 }
-.chart {
-  padding-top: 40px;
-  display: inline-block;
-  width: 110px;
-  margin: 40px auto 20px;
-  padding: 0 10px;
-}
-.easyPieChart {
-  position: relative;
-  text-align: center;
-}
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.percentage,
 .label {
-  margin-bottom: 0.5em;
-  text-align: center;
-  font-weight: 100;
-}
-.percentage {
-  font-size: 50px;
-}
-sup {
-  top: -0.2em;
-  margin-left: 1px;
+  height: 1em;
+  padding: 0.3em;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  display: none;
+  color: #333;
 }

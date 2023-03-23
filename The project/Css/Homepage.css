@@ -1,4 +1,5 @@
 /*-------------Reset-------------*/
+
 .page-container {
   min-height: 100vh;
   margin-bottom: 100px;
@@ -106,7 +107,7 @@ section {
   display: flex;
   flex-direction: column;
   font-family: "Saira Semi Condensed", sans-serif;
-  height: 4em;
+  height: 3.5em;
 
   overflow: hidden;
 }
@@ -124,7 +125,7 @@ section {
 
 .nav-link,
 .logo {
-  padding: 0 1em;
+  padding: 0 0.7em;
 }
 
 span.gradient {
@@ -259,7 +260,7 @@ a:hover {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px;
+  margin: 10px;
   background-color: white;
 
   padding-bottom: 1%;
@@ -348,7 +349,7 @@ body {
   overflow: hidden;
   position: relative;
   top: 10%;
-
+  max-width: 100%;
   text-align: center;
   margin: 100px auto;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
@@ -357,6 +358,7 @@ body {
 }
 
 .accordian ul {
+  max-width: 100%;
   width: 2000px;
   margin: 0;
   padding: 0;
@@ -397,7 +399,7 @@ body {
   left: 0;
   bottom: 0;
   width: 695px;
-  height: 100px;
+  height: 130px;
 }
 
 .image_title a {
@@ -617,6 +619,9 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
   color: #444;
 }
 /* -----------------Contact us------------------- */
+.col-md-6 {
+  max-width: 100%;
+}
 .contact_section {
   width: 100%;
   float: left;
@@ -665,7 +670,7 @@ textarea#comment::placeholder {
   color: #989696;
 }
 .send_bt {
-  width: 1300px;
+  width: 600px;
   float: left;
   margin-top: 50px;
   margin-left: 50px;
@@ -686,7 +691,7 @@ textarea#comment::placeholder {
 }
 /* --------------footer------------ */
 #footer {
-  height: 40vh;
+  height: 30vh;
 }
 
 footer {
@@ -756,7 +761,7 @@ ul.social-icons li a {
 
 .copyright {
   position: relative;
-  top: 70px;
+  top: 15px;
 
   text-align: center;
   color: #fff;

@@ -419,7 +419,7 @@ body {
 .srch_wrpr {
   width: 380px;
   max-width: 400px;
-  height: 63px;
+  height: 55px;
   position: relative;
 
   right: 50px;
@@ -695,7 +695,7 @@ textarea#comment::placeholder {
   background-color: #ff5858;
 }
 /* --------------footer------------ */
-#footer {
+#About-US {
   height: 30vh;
 }
 

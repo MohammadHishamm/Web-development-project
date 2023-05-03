@@ -5,15 +5,15 @@
   --o-padding: 1.6rem;
   --radius: 10px;
   --max-radius: 40px;
-  --c-lighter: #b1d0e050;
-  --c-light: #b1d0e050;
-  --c-medium: #6998ab60;
-  --c-dark: #40688290;
-  --c-darker: #40688260;
-  --c-elements: #b1d0e0;
+  --c-lighter: #e85a4f;
+  --c-light: #8e8d8a;
+  --c-medium: #8e8d8a;
+  --c-dark: #8e8d8a;
+  --c-darker: #8e8d8a;
+  --c-elements: #eae7dc;
   --c-bg-elements: #0004;
-  --c-card-main: #b1d0e090;
-  --c-card-side: #b1d0e040;
+  --c-card-main: #8e8d8a;
+  --c-card-side: #8e8d8a;
 }
 
 html {
@@ -54,7 +54,7 @@ body {
   min-height: 100vh;
   position: relative;
 }
-body .video {
+body {
   position: fixed;
   left: 0;
   top: 0;
@@ -63,7 +63,7 @@ body .video {
   overflow: hidden;
   z-index: -1;
 }
-body .video video {
+body {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;

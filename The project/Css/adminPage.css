@@ -6,14 +6,12 @@
   --radius: 10px;
   --max-radius: 40px;
   --c-lighter: #e85a4f;
-  --c-light: #8e8d8a;
-  --c-medium: #8e8d8a;
-  --c-dark: #8e8d8a;
-  --c-darker: #8e8d8a;
+  --c-light: #eae7dc;
+  --c-medium: #eae7dc;
+  --c-dark: #d8c3a5;
+  --c-darker: #d8c3a5;
   --c-elements: #eae7dc;
-  --c-bg-elements: #0004;
-  --c-card-main: #8e8d8a;
-  --c-card-side: #8e8d8a;
+  --c-bg-elements: #8e8d8a;
 }
 
 html {
@@ -55,11 +53,10 @@ body {
   position: relative;
 }
 body {
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -81,8 +78,6 @@ main {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  padding-left: 62px;
-  position: relative;
 }
 
 main .menu {
@@ -482,7 +477,6 @@ main .dashboard .cardcolumn .card .meta {
 }
 
 main .side {
-  margin-top: 60px;
   background-color: var(--c-medium);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -598,21 +592,15 @@ main .side .weather .meta .datetime .time {
     overflow: hidden;
   }
   main {
-    min-height: 500px;
-    max-height: calc(100vh - (2 * var(--o-padding)));
-    border-radius: var(--radius);
-    -ms-grid-columns: auto 380px;
+    height: 200%;
+
     grid-template-columns: 2fr 1fr;
-    padding-left: 74px;
+    padding-left: 40px;
   }
   main .menu {
     width: 74px;
     position: absolute;
-    top: unset;
-    border-radius: var(--radius) 0 0 var(--radius);
-  }
-  main .menu:hover {
-    border-radius: var(--radius);
+    top: 60px;
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;
@@ -628,9 +616,8 @@ main .side .weather .meta .datetime .time {
   }
   main .topbar {
     position: absolute;
-    width: calc(100% - 74px);
-    margin-left: 74px;
-    border-radius: 0 var(--radius) 0 0;
+    width: calc(100% - 0.1px);
+    margin-left: 0.1px;
   }
   main .topbar .search {
     margin-right: unset;
@@ -647,9 +634,7 @@ main .side .weather .meta .datetime .time {
     visibility: visible;
   }
   main .dashboard {
-    margin-top: 60px;
-    border-top: unset;
-    height: calc(100vh - (2 * var(--o-padding)) - 60px);
+    height: calc(100vh - (2 * var(--o-padding)));
     -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -657,9 +642,8 @@ main .side .weather .meta .datetime .time {
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
-    height: calc(100vh - (2 * var(--o-padding)) - 60px);
+    height: calc(100vh - (2 * var(--o-padding)) - 20px);
     border-top: unset;
-    margin-top: 60px;
-    border-radius: 0 0 var(--radius) 0;
+    margin-top: 20px;
   }
 }

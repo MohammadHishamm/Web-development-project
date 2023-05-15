@@ -8,12 +8,6 @@ const weatherContent = document.querySelector(".side .weather .content");
 const date = document.querySelector("main .side .date");
 const time = document.querySelector("main .side .time");
 
-// Fix :active touch on mobiles
-document.addEventListener("touchstart", () => {}, true);
-
-// Search Expand
-search.addEventListener("click", () => container.classList.toggle("search"));
-
 // Main Menu
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {

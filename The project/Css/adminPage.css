@@ -669,3 +669,7 @@ input:hover {
 .form-label {
   padding-left: 10px;
 }
+
+.section {
+  display: none;
+}

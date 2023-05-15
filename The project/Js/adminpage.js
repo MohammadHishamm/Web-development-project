@@ -83,3 +83,10 @@ btn2.addEventListener("click", () => {
   section1.style.display = "none";
   section2.style.display = "block";
 });
+
+var checkList = document.getElementById("list1");
+checkList.getElementsByClassName("anchor")[0].onclick = function (evt) {
+  if (checkList.classList.contains("visible"))
+    checkList.classList.remove("visible");
+  else checkList.classList.add("visible");
+};

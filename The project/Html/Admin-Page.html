@@ -98,24 +98,33 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="UrunAdi" class="form-label">Colors available:</label>
-                  <select
-                    name="Kategori"
-                    id="Kategori"
-                    class="ms-1 d-block w-100"
+                  <label for="UrunID" class="form-label">Product description:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="UrunID"
+                    aria-describedby=""
                     required
-                  >
-                    <option></option>
-                    <option value="Elektronik">Black</option>
-                    <option value="Giyim">White</option>
-                    <option value="Kirtasiye">Grey</option>
-                    <option value="Yiyecek">Yellow</option>
-                    <option value="Yiyecek">Green</option>
-                    <option value="Yiyecek">Red</option>
-                    <option value="Yiyecek">Blue</option>
-                    <option value="Yiyecek">Brown</option>
-                    
-                  </select>
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="UrunAdi" class="form-label">Colors available:</label>
+                  <div id="list1" class="dropdown-check-list" tabindex="100">
+                    <span class="anchor">Select color/s</span>
+                    <ul class="items">
+                      <li><input type="checkbox" />Red </li>
+                      <li><input type="checkbox" />Orange</li>
+                      <li><input type="checkbox" />Blue </li>
+                      <li><input type="checkbox" />White </li>
+                      <li><input type="checkbox" />Black </li>
+                      <li><input type="checkbox" />Grey </li>
+                      <li><input type="checkbox" />Pink</li>
+                      <li><input type="checkbox" />Magenta</li>
+                      <li><input type="checkbox" />Turquase</li>
+                      <li><input type="checkbox" />Off-white</li>
+                      <li><input type="checkbox" />Green</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="UrunMiktar"
@@ -207,6 +216,24 @@
                   <label for="UrunImage" class="form-label"
                     >Product Image</label
                   >
+                  <input
+                    type="file"
+                    class="form-control"
+                    name="UrunImage"
+                    id="UrunImage"
+                  />
+                  <input
+                    type="file"
+                    class="form-control"
+                    name="UrunImage"
+                    id="UrunImage"
+                  />
+                  <input
+                    type="file"
+                    class="form-control"
+                    name="UrunImage"
+                    id="UrunImage"
+                  />
                   <input
                     type="file"
                     class="form-control"

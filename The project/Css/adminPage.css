@@ -37,11 +37,11 @@ html::-webkit-scrollbar-thumb {
 
 main {
   max-height: 100vh;
-  width: 100%;
+  width: 97%;
   display: -ms-grid;
   display: grid;
   bottom: 100%;
-  right: 100%;
+  right: 97%;
 }
 
 main .menu {
@@ -186,11 +186,10 @@ main .menu:active .expander {
 }
 
 main .topbar {
-  position: fixed;
   left: 0;
+
   top: 0;
-  width: calc(100% - 62px);
-  margin-left: 62px;
+
   height: 60px;
   z-index: 1;
   background: var(--c-dark);
@@ -454,6 +453,7 @@ main .side {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
+  right: 0;
 }
 main .dashboard .card,
 main .side .card {
@@ -556,7 +556,7 @@ main .side .weather .meta .datetime .time {
     overflow: hidden;
   }
   main {
-    height: 200%;
+    height: 50%;
 
     grid-template-columns: 2fr 1fr;
     padding-left: 40px;
@@ -565,6 +565,7 @@ main .side .weather .meta .datetime .time {
     width: 74px;
     position: absolute;
     top: 60px;
+    height: 90%;
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;

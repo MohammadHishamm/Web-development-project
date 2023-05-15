@@ -66,22 +66,31 @@ const weatherData = async () => {
   }
 };
 
-dummyData();
 weatherData();
 
 var btn1 = document.getElementById("btn-1");
 var btn2 = document.getElementById("btn-2");
+var btn3 = document.getElementById("btn-3");
 var section1 = document.getElementById("section1");
 var section2 = document.getElementById("section2");
+var section3 = document.getElementById("section3");
 
 btn1.addEventListener("click", () => {
   section1.style.display = "block";
   section2.style.display = "none";
+  section3.style.display = "none";
 });
 
 btn2.addEventListener("click", () => {
   section1.style.display = "none";
   section2.style.display = "block";
+  section3.style.display = "none";
+});
+
+btn3.addEventListener("click", () => {
+  section1.style.display = "none";
+  section2.style.display = "none";
+  section3.style.display = "block";
 });
 
 var checkList = document.getElementById("list1");

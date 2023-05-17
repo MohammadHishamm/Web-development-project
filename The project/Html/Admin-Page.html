@@ -37,14 +37,14 @@
           <span class="iconoir-report-columns"></span>
           <span class="desc">Offers</span>
         </button>
-          <a href="#" class="menu-item">
-            <span class="iconoir-bag"></span>
-            <span class="desc">Cart</span>
-          </a>
-          <a href="#" class="menu-item">
-            <span class="iconoir-user"></span>
-            <span class="desc">Clients</span>
-          </a>
+        <button id="btn-4" class="menu-item ">
+          <span class="iconoir-report-columns"></span>
+          <span class="desc">About Us</span>
+        </button>
+        <button id="btn-5" class="menu-item ">
+          <span class="iconoir-report-columns"></span>
+          <span class="desc">Users</span>
+        </button>
           <a href="#" class="menu-item">
             <span class="iconoir-leaderboard"></span>
             <span class="desc">Analytics</span>
@@ -81,26 +81,29 @@
               <form class="mt-5">
                 <div class="mb-3">
                   <label for="UrunID" class="form-label">Product Name:</label>
+                  <br>
                   <input
                     type="text"
-                    class="form-control"
+                    class="desc1"
                     id="UrunID"
                     aria-describedby=""
                     required
                   />
                 </div>
+                
                 <div class="mb-3">
                   <label for="UrunID" class="form-label">Product description:</label>
+                  <br>
                   <input
                     type="text"
-                    class="form-control"
+                    class="desc1"
                     id="UrunID"
                     aria-describedby=""
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="UrunAdi" class="form-label">Colors available:</label>
+                  <label for="UrunAdi" class="desc2">Colors available:</label>
                   <div id="list1" class="dropdown-check-list" tabindex="100">
                     <span class="anchor">Select color/s</span>
                     <ul class="items">
@@ -120,23 +123,25 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="UrunMiktar"
-                    >Stock Quantity</label
+                    >Stock Quantity:</label
                   >
+                  <br>
                   <input
                     type="number"
-                    class="form-control"
+                    class="desc1"
                     id="UrunMiktar"
                     required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="Kategori" class="form-label"
-                    >Product Category</label
+                    >Product Category:</label
                   >
+                  <br>
                   <select
                     name="Kategori"
                     id="Kategori"
-                    class="ms-1 d-block w-100"
+                    class="desc1"
                     required
                   >
                     <option></option>
@@ -151,10 +156,11 @@
                   <label for="Kategori" class="form-label"
                     >Shipping area:</label
                   >
+                  <br>
                   <select
                     name="Kategori"
                     id="Kategori"
-                    class="ms-1 d-block w-100"
+                    class="desc1"
                     required
                   >
                     <option></option>
@@ -169,10 +175,10 @@
                   <label for="Kategori" class="form-label"
                     >Shipping fees:</label
                   >
-
-                  <input
+                  <br>
+                  <input 
                   type="number"
-                  class="form-control"
+                  class="desc1"
                   id="UrunMiktar"
                   required
                 />
@@ -182,10 +188,10 @@
                   <label for="Kategori" class="form-label"
                     >Old price:</label
                   >
-                    
+                  <br>
                   <input
                   type="number"
-                  class="form-control"
+                  class="desc1"
                   id="UrunMiktar"
                   required
                 />
@@ -195,10 +201,10 @@
                   <label for="Kategori" class="form-label"
                     >New price: </label
                   >
-                    
+                  <br>
                   <input
                   type="number"
-                  class="form-control"
+                  class="desc1"
                   id="UrunMiktar"
                   required
                 />
@@ -206,48 +212,53 @@
                 </div>
                 <div class="mb-3">
                   <label for="UrunImage" class="form-label"
-                    >Product Image</label
+                    >Product Image:</label
                   >
+                  <br>
                   <input
                     type="file"
-                    class="form-control"
+                    class="custom-file-input"
                     name="UrunImage"
                     id="UrunImage"
                   />
+                  <br>
                   <input
                     type="file"
-                    class="form-control"
+                    class="custom-file-input"
                     name="UrunImage"
                     id="UrunImage"
                   />
+                  <br>
                   <input
                     type="file"
-                    class="form-control"
+                    class="custom-file-input"
                     name="UrunImage"
                     id="UrunImage"
                   />
+                  <br>
                   <input
                     type="file"
-                    class="form-control"
+                    class="custom-file-input"
                     name="UrunImage"
                     id="UrunImage"
                   />
                 </div>
+                <br>
                 <div class="mt-4">
                   
                   
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="btndiv">
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Add product
                   </button>
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Upgrade product
@@ -271,7 +282,7 @@
                   <label for="UrunID" class="form-label">Category Name:</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="desc1"
                     id="UrunID"
                     aria-describedby=""
                     required
@@ -282,28 +293,30 @@
                   <label for="UrunImage" class="form-label"
                     >Category Image:</label
                   >
+                  
                   <input
                     type="file"
                     class="form-control"
                     name="UrunImage"
                     id="UrunImage"
                   />
+                  <br>
                 </div>
                 <div class="mt-4">
         
         
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="btndiv">
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Add Category
                   </button>
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Upgrade Category
@@ -327,7 +340,7 @@
                   <label for="UrunID" class="form-label">Product Name:</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="desc1"
                     id="UrunID"
                     aria-describedby=""
                     required
@@ -337,7 +350,7 @@
                   <label for="UrunID" class="form-label">Product description:</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="desc1"
                     id="UrunID"
                     aria-describedby=""
                     required
@@ -354,7 +367,7 @@
                     
                   <input
                   type="number"
-                  class="form-control"
+                  class="desc1"
                   id="UrunMiktar"
                   required
                 />
@@ -367,28 +380,30 @@
                     
                   <input
                   type="number"
-                  class="form-control"
+                  class="desc1"
                   id="UrunMiktar"
                   required
                 />
                   </select>
+                  
                 </div>
                 
                 <div class="mt-4">
                   
                   
                 </div>
-                <div class="d-flex justify-content-center">
+                <br>
+                <div class="btndiv">
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Add Offer
                   </button>
                   <button
                     type="submit"
-                    class="btn btn-success text-white btn-outline-success form-control w-50 m-3"
+                    class="btnn"
                     id="ekleButton"
                   >
                     Upgrade Offer

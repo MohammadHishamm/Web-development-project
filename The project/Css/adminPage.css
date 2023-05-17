@@ -726,3 +726,55 @@ input:hover {
 .dropdown-check-list.visible .items {
   display: block;
 }
+
+.desc1 {
+  width: 90%;
+  height: 30px;
+}
+.mb-3 {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+.form-label {
+  text-align: left;
+  font-size: 18px;
+}
+.desc2 {
+  padding-right: 20px;
+  padding-left: 9px;
+  font-size: 18px;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+.custom-file-input {
+  padding: 10px;
+}
+.btnn {
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+}
+.btndiv {
+  padding-left: 30%;
+}
